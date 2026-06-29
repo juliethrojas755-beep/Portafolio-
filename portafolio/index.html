@@ -1,578 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Julieth Tatiana Rojas | Desarrolladora Full Stack Junior | Portafolio Premium</title>
-    <meta name="description" content="Portafolio profesional de Julieth Tatiana Rojas, Desarrolladora Full Stack Junior en formación en Campuslands. Descubre mis proyectos de software y habilidades frontend y backend.">
-    <meta name="keywords" content="Julieth Tatiana Rojas, Desarrolladora Full Stack, Desarrollador Junior, Portafolio, Campuslands, Python, HTML, CSS, JavaScript, Frontend, Backend">
-    <meta name="author" content="Julieth Tatiana Rojas">
-    <meta name="robots" content="index, follow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julieth Tatiana Rojas | Portafolio</title>
+  <meta name="description" content="Portafolio profesional de Julieth Tatiana Rojas, Desarrolladora Full Stack Junior.">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://juliethrojas755-beep.github.io/portfolio/">
-    <meta property="og:title" content="Julieth Tatiana Rojas | Desarrolladora Full Stack Junior">
-    <meta property="og:description" content="Portafolio profesional de Julieth Tatiana Rojas. Descubre mis proyectos, tecnologías y habilidades blandas en un diseño premium y responsive.">
-    <meta property="og:image" content="assets/images/profile.jpg">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://juliethrojas755-beep.github.io/portfolio/">
-    <meta property="twitter:title" content="Julieth Tatiana Rojas | Desarrolladora Full Stack Junior">
-    <meta property="twitter:description" content="Portafolio profesional de Julieth Tatiana Rojas. Descubre mis proyectos, tecnologías y habilidades blandas en un diseño premium y responsive.">
-    <meta property="twitter:image" content="assets/images/profile.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Premium Custom Cursor -->
-    <div class="custom-cursor" id="custom-cursor"></div>
-    <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+  <!-- Navbar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="#home" class="nav-logo">&lt;Julieth.dev/&gt;</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Inicio</a></li>
+        <li><a href="#about" class="nav-link">Sobre mí</a></li>
+        <li><a href="#skills" class="nav-link">Habilidades</a></li>
+        <li><a href="#portfolio" class="nav-link">Proyectos</a></li>
+        <li><a href="#contact" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Background Decorative Gradient Blobs -->
-    <div class="bg-blob blob-blue"></div>
-    <div class="bg-blob blob-purple"></div>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-badge">Disponible para nuevos retos</div>
+    <h2 class="hero-welcome">Hola 👋 Soy</h2>
+    <h1 class="hero-name">Julieth Tatiana Rojas</h1>
+    <h3 class="hero-title"><span id="typewriter">Backend & Frontend Developer en Formación</span></h3>
+    <p class="hero-desc">
+      Apasionada por la tecnología, el desarrollo de software y el aprendizaje continuo. Construyendo soluciones digitales modernas, estructuradas y centradas en la experiencia del usuario.
+    </p>
+    <div class="hero-photo-wrapper">
+      <img src="imagenjulieth.jpeg" alt="Fotografía Profesional de Julieth Tatiana Rojas" class="hero-profile-image">
+    </div>
+    <div class="hero-cta">
+      <a href="#portfolio" class="btn btn-primary">Ver Proyectos</a>
+      <a href="CV.pdf" class="btn btn-secondary" target="_blank">Descargar CV</a>
+    </div>
+  </section>
 
-    <!-- Header / Navbar -->
-    <header class="navbar-wrapper">
-        <nav class="navbar container" aria-label="Navegación principal">
-            <a href="#home" class="nav-logo" aria-label="Inicio">
-                <span class="logo-accent">&lt;</span>Julieth<span class="logo-accent">.dev /&gt;</span>
-            </a>
-            
-            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
-                <span class="hamburger"></span>
-            </button>
+  <!-- About Section -->
+  <section id="about" class="section-scroll">
+    <h2 class="section-title">Sobre mí</h2>
+    <p>
+      Soy Julieth Tatiana Rojas, Desarrolladora Full Stack Junior en constante evolución y comprometida con las mejores prácticas.
+    </p>
+    <p>
+      Actualmente curso la Técnica Laboral en Desarrollo de Software en Campuslands, donde he fortalecido mis habilidades tanto en desarrollo Frontend como Backend. Mi objetivo profesional es convertirme en una desarrolladora Full Stack capaz de construir soluciones modernas, escalables y centradas en la experiencia del usuario.
+    </p>
+    <ul>
+      <li>0 Tecnologías aprendidas</li>
+      <li>0 Proyectos principales</li>
+      <li>0 Formación técnica</li>
+    </ul>
+    <p>⚡ Aprendizaje continuo</p>
+    <h3>Trayectoria Educativa</h3>
+    <p><strong>Actualidad:</strong> Técnico Laboral en Desarrollo de Software - Campuslands, Floridablanca</p>
+    <p><strong>Educación Media:</strong> Bachiller Técnico - Colegio Técnico Industrial José Elías Puyana</p>
+  </section>
 
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link active">Inicio</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">Sobre mí</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link">Habilidades</a></li>
-                <li class="nav-item"><a href="#portfolio" class="nav-link">Proyectos</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Skills Section -->
+  <section id="skills" class="section-scroll">
+    <h2 class="section-title">Habilidades</h2>
+    <h3>Tecnologías y Herramientas</h3>
+    <ul>
+      <li>Python</li>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Git / GitHub</li>
+      <li>Linux</li>
+      <li>Bases de Datos</li>
+      <li>Scrum</li>
+      <li>PSeInt</li>
+    </ul>
+    <h3>Habilidades Blandas</h3>
+    <p>Liderazgo, Comunicación, Trabajo en equipo, Creatividad, Empatía, Resolución de problemas, Aprendizaje continuo, Adaptabilidad</p>
+  </section>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero-section container section-scroll">
-            <div class="hero-grid">
-                <!-- Text Content (Left side in desktop) -->
-                <div class="hero-content">
-                    <div class="hero-badge reveal-fade">
-                        <span class="badge-dot"></span>
-                        Disponible para nuevos retos
-                    </div>
-                    <h2 class="hero-welcome reveal-slide-up">Hola 👋 Soy</h2>
-                    <h1 class="hero-name reveal-slide-up">Julieth Tatiana Rojas</h1>
-                    <h3 class="hero-title reveal-slide-up">
-                        <span class="typewriter-text" id="typewriter">Desarrolladora Full Stack Junior</span>
-                    </h3>
-                    <p class="hero-desc reveal-slide-up">
-                        Apasionada por la tecnología, el desarrollo de software y el aprendizaje continuo. Construyendo soluciones digitales modernas, estructuradas y centradas en la experiencia del usuario.
-                    </p>
-                    <div class="hero-cta reveal-slide-up">
-                        <a href="#portfolio" class="btn btn-primary">
-                            <span>Ver Proyectos</span>
-                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                        <a href="https://drive.google.com/file/d/1XZ1Rsijot8zIcNfcdIAhjyFIcie9QUZ2/view?usp=drive_link" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                            <span>Descargar CV</span>
-                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        </a>
-                    </div>
-                </div>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section-scroll">
+    <h2 class="section-title">Proyectos</h2>
 
-                <!-- Photograph Column (Right side in desktop) -->
-                <div class="hero-photo-wrapper reveal-fade">
-                    <div class="photo-glow-effect"></div>
-                    <div class="photo-border-gradient">
-                        <div class="photo-inner-container">
-                            <img src="assets/images/profile.jpg" alt="Fotografía Profesional de Julieth Tatiana Rojas" class="hero-profile-image" loading="eager" onerror="this.src='assets/images/profile-placeholder.svg';">
-                            <!-- Premium Fallback avatar when photo isn't copied yet -->
-                            <div class="avatar-fallback" style="display:none;">
-                                <div class="fallback-initials">JTR</div>
-                                <p class="fallback-hint">Su foto cargará aquí</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="project-card">
+      <h3>🐍 Campus Management System</h3>
+      <p>Proyecto en Python para administrar información de estudiantes, entrenadores y matrículas.</p>
+      <p><strong>Lo aprendido:</strong> Lógica de programación, persistencia de datos (JSON), trabajo colaborativo.</p>
+      <div class="project-actions">
+        <a href="#" class="btn btn-git">Código</a>
+        <a href="#" class="btn btn-demo">Demo</a>
+      </div>
+    </div>
 
-        <!-- About Me Section -->
-        <section id="about" class="about-section bg-light section-scroll">
-            <div class="container">
-                <div class="section-header text-center reveal-slide-up">
-                    <h2 class="section-title">Sobre mí</h2>
-                    <div class="section-underline"></div>
-                </div>
+    <div class="project-card">
+      <h3>💻 TaskFlow CLI Tool</h3>
+      <p>Aplicación CLI en Python para gestión de tareas diarias.</p>
+      <p><strong>Lo aprendido:</strong> Manejo de argumentos CLI, modularización, UX en consola.</p>
+      <div class="project-actions">
+        <a href="#" class="btn btn-git">Código</a>
+        <a href="#" class="btn btn-demo">Demo</a>
+      </div>
+    </div>
 
-                <div class="about-grid">
-                    <!-- About Profile Image Card -->
-                    <div class="about-card-wrapper reveal-slide-up">
-                        <div class="about-photo-card glass-card">
-                            <div class="about-photo-container">
-                                <img src="assets/images/profile.jpg" alt="Julieth Tatiana Rojas" class="about-profile-image" loading="lazy" onerror="this.src='assets/images/profile-placeholder.svg';">
-                                <div class="avatar-fallback" style="display:none;">
-                                    <div class="fallback-initials">JTR</div>
-                                </div>
-                            </div>
-                            <div class="about-card-info">
-                                <h4>Julieth Tatiana Rojas</h4>
-                                <p>Desarrolladora Full Stack Junior</p>
-                            </div>
-                        </div>
-                    </div>
+    <div class="project-card">
+      <h3>🛍️ CampusShop E-Commerce</h3>
+      <p>Plataforma e-commerce con HTML5, CSS3 y JavaScript.</p>
+      <p><strong>Mi aporte:</strong> Diseño UI, maquetación, organización de contenido, UX.</p>
+      <div class="project-actions">
+        <a href="#" class="btn btn-git">Código</a>
+        <a href="#" class="btn btn-demo">Demo</a>
+      </div>
+    </div>
+  </section>
 
-                    <!-- Bio and Animated Stats -->
-                    <div class="about-bio-wrapper">
-                        <div class="about-text-content reveal-slide-up">
-                            <p class="bio-highlight">Desarrolladora de software en constante evolución y comprometida con las mejores prácticas.</p>
-                            <p class="bio-text">
-                                Actualmente curso la <strong>Técnica Laboral en Desarrollo de Software</strong> en <strong>Campuslands</strong>, donde he fortalecido mis habilidades tanto en desarrollo Frontend como Backend. Mi enfoque de aprendizaje me permite adaptarme a nuevas tecnologías rápidamente y abordar desafíos lógicos de manera estructurada.
-                            </p>
-                            <p class="bio-text">
-                                Mi objetivo profesional es convertirme en una desarrolladora Full Stack capaz de construir soluciones modernas, escalables y centradas en la experiencia del usuario, aportando creatividad, responsabilidad y liderazgo técnico en cada equipo del que formo parte.
-                            </p>
-                        </div>
+  <!-- Contact Section -->
+  <section id="contact" class="section-scroll">
+    <h2 class="section-title">Contacto</h2>
+    <p>¿Tienes un proyecto en mente o buscas sumar talento a tu equipo? ¡Hablemos!</p>
+    <p><strong>Correo:</strong> <a href="mailto:juliethrojas755@gmail.com">juliethrojas755@gmail.com</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/juliethrojas755-beep" target="_blank">juliethrojas755-beep</a></p>
+    <p><strong>LinkedIn:</strong> Próximamente disponible</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/573505734299" target="_blank">+57 3505734299</a></p>
+  </section>
 
-                        <!-- Statistics Grid -->
-                        <div class="stats-grid reveal-slide-up">
-                            <div class="stat-card glass-card">
-                                <div class="stat-icon-wrapper">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                                </div>
-                                <div class="stat-value" data-target="10">0</div>
-                                <div class="stat-label">Tecnologías aprendidas</div>
-                            </div>
-                            
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Julieth Tatiana Rojas. Todos los derechos reservados.</p>
+    <p>Gracias por visitar mi portafolio.</p>
+    <p>Hecho con ❤️ usando HTML, CSS y JavaScript.</p>
+  </footer>
 
-                            <div class="stat-card glass-card">
-                                <div class="stat-icon-wrapper">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                                </div>
-                                <div class="stat-value" data-target="3">0</div>
-                                <div class="stat-label">Proyectos principales</div>
-                            </div>
-
-                            <div class="stat-card glass-card">
-                                <div class="stat-icon-wrapper">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10v6M12 22v-6M12 2v6"></path><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path></svg>
-                                </div>
-                                <div class="stat-value" data-target="1">0</div>
-                                <div class="stat-label">Formación técnica</div>
-                            </div>
-
-                            <div class="stat-card glass-card">
-                                <div class="stat-icon-wrapper">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                                </div>
-                                <div class="stat-value-infinity">⚡</div>
-                                <div class="stat-label">Aprendizaje continuo</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modern Timeline Component -->
-                <div class="timeline-container reveal-slide-up">
-                    <h3 class="timeline-header-title text-center">Trayectoria Educativa</h3>
-                    
-                    <div class="timeline">
-                        <div class="timeline-item left">
-                            <div class="timeline-badge"></div>
-                            <div class="timeline-panel glass-card">
-                                <span class="timeline-date">Actualidad</span>
-                                <h4 class="timeline-title">Técnico Laboral en Desarrollo de Software</h4>
-                                <p class="timeline-institution">Campuslands, Floridablanca</p>
-                                <p class="timeline-details">Formación intensiva de alto rendimiento en tecnologías de desarrollo frontend, backend, metodologías ágiles (Scrum), control de versiones y bases de datos relacionales y no relacionales.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item right">
-                            <div class="timeline-badge"></div>
-                            <div class="timeline-panel glass-card">
-                                <span class="timeline-date">Educación Media</span>
-                                <h4 class="timeline-title">Bachiller Técnico</h4>
-                                <p class="timeline-institution">Colegio Técnico Industrial José Elías Puyana</p>
-                                <p class="timeline-details">Desarrollo de competencias técnicas base, pensamiento analítico, disciplina de estudio e iniciación en la resolución de problemas y lógica matemática.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical and Soft Skills Section -->
-        <section id="skills" class="skills-section section-scroll">
-            <div class="container">
-                <div class="section-header text-center reveal-slide-up">
-                    <h2 class="section-title">Habilidades</h2>
-                    <div class="section-underline"></div>
-                </div>
-
-                <!-- Technical Skills -->
-                <div class="skills-wrapper">
-                    <h3 class="skills-subtitle text-center reveal-slide-up">Tecnologías y Herramientas</h3>
-                    <div class="skills-grid">
-                        
-                        <!-- Python Card -->
-                        <div class="skill-card glass-card reveal-slide-up" data-tech="python">
-                            <div class="skill-icon-box">
-                                <svg class="tech-icon" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true">
-                                    <path fill="#3776AB" d="M12.002 2c-5.522 0-5.187 2.4-5.187 2.4l.006 2.484h5.272V7.63H4.75S2 7.844 2 12.894c0 5.05 2.428 4.908 2.428 4.908h1.442v-2.036c0-2.52 2.05-4.57 4.57-4.57h4.862s2.213-.03 2.213-2.18V6.262S17.753 2 12.002 2z"/>
-                                    <path fill="#FFD343" d="M11.998 22c5.523 0 5.188-2.4 5.188-2.4l-.007-2.484H11.91v-.748h7.34s2.75-.213 2.75-5.263c0-5.05-2.427-4.908-2.427-4.908h-1.442v2.037c0 2.52-2.05 4.57-4.57 4.57H10.7s-2.213.03-2.213 2.18v2.753S6.247 22 11.998 22z"/>
-                                    <circle cx="9.04" cy="4.81" r=".65" fill="#FFF"/>
-                                    <circle cx="14.96" cy="19.19" r=".65" fill="#FFF"/>
-                                </svg>
-                            </div>
-                            <span class="skill-name">Python</span>
-                        </div>
-
-                        <!-- HTML5 Card -->
-                        <div class="skill-card glass-card reveal-slide-up" data-tech="html">
-                            <div class="skill-icon-box">
-                                <svg class="tech-icon" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true">
-                                    <path fill="#E34F26" d="M1.5 22L0 0h24l-1.5 22L12 24z"/>
-                                    <path fill="#EF652A" d="M12 22V1.8h10.5l-1.4 14.8z"/>
-                                    <path fill="#FFF" d="M12 11.2H8.3l-.3-3h3.6V5.3H5l.8 8.9H12zm0 5.8l-3.3-1-.2-2.1H5.4l.4 4.9 6.2 1.7z"/>
-                                    <path fill="#EBEBEB" d="M12 11.2h3.7l-.3 3.5-3.4 1v3.2l6.2-1.7.9-9.9h-7.1zm0-5.9h6.7l.2-2.9H12z"/>
-                                </svg>
-                            </div>
-                            <span class="skill-name">HTML5</span>
-                        </div>
-
-                        <!-- CSS3 Card -->
-                        <div class="skill-card glass-card reveal-slide-up" data-tech="css">
-                            <div class="skill-icon-box">
-                                <svg class="tech-icon" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true">
-                                    <path fill="#1572B6" d="M1.5 22L0 0h24l-1.5 22L12 24z"/>
-                                    <path fill="#33A9DC" d="M12 22V1.8h10.5l-1.4 14.8z"/>
-                                    <path fill="#FFF" d="M12 11.2H8.3l-.3-3h3.6V5.3H5l.8 8.9H12zm0 5.8l-3.3-1-.2-2.1H5.4l.4 4.9 6.2 1.7z"/>
-                                    <path fill="#EBEBEB" d="M12 11.2h3.7l-.4 3.5-3.3 1v3.2l6.2-1.7.9-9.9h-7.1zm0-5.9h6.7l.2-2.9H12z"/>
-                                </svg>
-                            </div>
-                            <span class="skill-name">CSS3</span>
-                        </div>
-
-                        <!-- JavaScript Card -->
-                        <div class="skill-card glass-card reveal-slide-up" data-tech="js">
-                            <div class="skill-icon-box">
-                                <svg class="tech-icon" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true">
-                                    <path fill="#F7DF1E" d="M0 0h24v24H0z"/>
-                                    <path d="M20.73 17.5c-.37-.8-1-1.36-2.14-1.36-1.13 0-1.85.55-1.85 1.76 0 2.5 3.57 2.1 3.57 5.06 0 1.63-1.32 2.66-3.23 2.66-2 0-2.88-1.07-3.28-2l1.64-1c.32.55.8 1.07 1.6 1.07.82 0 1.25-.43 1.25-1.07 0-2.22-3.57-1.85-3.57-4.9 0-1.6 1.25-2.7 3.12-2.7 1.54 0 2.64.75 3.2 2.12zm-8.8-7.75v11.75c-.75.46-1.7.67-2.6.67-2.25 0-3.7-1.36-3.7-4.14V9.75h2.1v5.76c0 1.48.65 2.1 1.75 2.1.48 0 .86-.1 1.15-.3V9.75z"/>
-                                </svg>
-                            </div>
-                            <span class="skill-name">JavaScript</span>
-                        </div>
-
-                        <!-- Git Card -->
-                        <div class="skill-card glass-card reveal-slide-up" data-tech="git">
-                            <div class="skill-icon-box">
-                                <svg class="tech-icon" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true">
-                                    <path fill="#F05032" d="M23.26 11.23L12.77.74a1.7 1.7 0 0 0-2.4 0L8.03 3.08l2.9 2.9a2.53 2.53 0 0 1 3.65 3.65l2.9 2.9a2.5 2.5 0 0 1 3.77 3.8l2.01-2.01a1.7 1.7 0 0 0 0-2.39zM15.4 11.7a2.5 2.5 0 0 1-3.66-3.64L8.85 5.16a2.52 2.52 0 0 1-3.7 3.78l8.3 8.3a2.52 2.52 0 1 1-2.58 2.55"/>
-                                </svg>
-                            </div>
-                            <span class="skill-name">Git</span>
-                        </div>
-
-                        <!-- GitHub Card -->
-                        <div class="skill-card glass-card reveal-slide-up" data-tech="github">
-                            <div class="skill-icon-box">
-                                <svg class="tech-icon" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true" fill="currentColor">
-                                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                                </svg>
-                            </div>
-                            <span class="skill-name">GitHub</span>
-                        </div>
-
-                        <!-- Linux Card -->
-                        <div class="skill-card glass-card reveal-slide-up" data-tech="linux">
-                            <div class="skill-icon-box">
-                                <svg class="tech-icon" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true" fill="currentColor">
-                                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" style="display:none;"/>
-                                    <!-- Real Linux custom SVG path (Tux theme or clean Linux terminal representation) -->
-                                    <path d="M12 .002c-3.13 0-5.69 2.56-5.69 5.69 0 2.28 1.35 4.25 3.28 5.15C7.9 11.23 6.64 12.87 6.64 14.8c0 .28.02.56.07.83-.56.34-1 .92-1.12 1.63-.22 1.25.64 2.4 1.83 2.45h9.16c1.19-.05 2.05-1.2 1.83-2.45-.12-.71-.56-1.29-1.12-1.63.05-.27.07-.55.07-.83 0-1.93-1.26-3.57-2.95-3.96 1.93-.9 3.28-2.87 3.28-5.15 0-3.13-2.56-5.69-5.69-5.69zm0 1.56c2.28 0 4.13 1.85 4.13 4.13 0 2.28-1.85 4.13-4.13 4.13a4.13 4.13 0 0 1-4.13-4.13c0-2.28 1.85-4.13 4.13-4.13zM8.2 14.8c0-1.57 1.09-2.92 2.55-3.21a4.2 4.2 0 0 0 2.5 0c1.46.29 2.55 1.64 2.55 3.21v2.75H8.2V14.8z" fill="#000000"/>
-                                    <!-- A modern Linux Terminal representation SVG for cleaner UI -->
-                                    <rect x="2" y="3" width="20" height="18" rx="2" fill="#0F172A" />
-                                    <path d="M6 8l3 3-3 3M11 14h6" stroke="#C4B5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                </svg>
-                            </div>
-                            <span class="skill-name">Linux</span>
-                        </div>
-
-                        <!-- Bases de Datos Card -->
-                        <div class="skill-card glass-card reveal-slide-up" data-tech="db">
-                            <div class="skill-icon-box">
-                                <svg class="tech-icon" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true" fill="none" stroke="#2563EB" stroke-width="2">
-                                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                                    <path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-                                    <path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/>
-                                </svg>
-                            </div>
-                            <span class="skill-name">Bases de Datos</span>
-                        </div>
-
-                        <!-- Scrum Card -->
-                        <div class="skill-card glass-card reveal-slide-up" data-tech="scrum">
-                            <div class="skill-icon-box">
-                                <svg class="tech-icon" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                            </div>
-                            <span class="skill-name">Scrum</span>
-                        </div>
-
-                        <!-- PSeInt Card -->
-                        <div class="skill-card glass-card reveal-slide-up" data-tech="pseint">
-                            <div class="skill-icon-box">
-                                <svg class="tech-icon" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true" fill="none" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                    <line x1="9" y1="9" x2="15" y2="15"/>
-                                    <line x1="15" y1="9" x2="9" y2="15"/>
-                                </svg>
-                            </div>
-                            <span class="skill-name">PSeInt</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Soft Skills -->
-                <div class="soft-skills-wrapper reveal-slide-up">
-                    <h3 class="skills-subtitle text-center">Habilidades Blandas</h3>
-                    <div class="chips-container">
-                        <span class="skill-chip">Liderazgo</span>
-                        <span class="skill-chip">Comunicación</span>
-                        <span class="skill-chip">Trabajo en equipo</span>
-                        <span class="skill-chip">Creatividad</span>
-                        <span class="skill-chip">Empatía</span>
-                        <span class="skill-chip">Resolución de problemas</span>
-                        <span class="skill-chip">Aprendizaje continuo</span>
-                        <span class="skill-chip">Adaptabilidad</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="portfolio" class="portfolio-section bg-light section-scroll">
-            <div class="container">
-                <div class="section-header text-center reveal-slide-up">
-                    <h2 class="section-title">Proyectos</h2>
-                    <div class="section-underline"></div>
-                </div>
-
-                <div class="projects-grid">
-                    
-                    <!-- Project 1: Sistema de Gestión Campus -->
-                    <article class="project-card glass-card reveal-slide-up">
-                        <div class="project-image-box">
-                            <img src="assets/images/project1.png" alt="Miniatura de Sistema de Gestión Campus" class="project-img" onerror="this.src='assets/images/project-placeholder.svg';">
-                            <div class="project-img-placeholder pattern-python">
-                                <span class="placeholder-icon">🐍</span>
-                                <span class="placeholder-text">Campus Management System</span>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="overlay-tech-badges">
-                                    <span class="tech-badge">Python</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Sistema de Gestión Campus</h3>
-                            <p class="project-desc">Proyecto desarrollado en Python enfocado en la lógica de negocio para administrar la información de los estudiantes, entrenadores, rutas de entrenamiento y matrículas académicas.</p>
-                            
-                            <div class="project-learnings">
-                                <h4 class="learnings-title">Lo aprendido:</h4>
-                                <ul class="learnings-list">
-                                    <li>Lógica de programación estructurada</li>
-                                    <li>Manejo y persistencia de datos (JSON)</li>
-                                    <li>Trabajo colaborativo y control de versiones</li>
-                                    <li>Resolución de problemas algorítmicos complejos</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-actions">
-                                <a href="https://github.com/juliethrojas755-beep" class="btn-project btn-git" target="_blank" rel="noopener noreferrer">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                                    <span>Código</span>
-                                </a>
-                                <a href="#" class="btn-project btn-demo" onclick="event.preventDefault(); alert('Este proyecto corre por terminal (CLI). Visita el repositorio en GitHub para ver la documentación e instalación.');">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                    <span>Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 2: TaskFlow CLI -->
-                    <article class="project-card glass-card reveal-slide-up">
-                        <div class="project-image-box">
-                            <img src="assets/images/project2.png" alt="Miniatura de TaskFlow CLI" class="project-img" onerror="this.src='assets/images/project-placeholder.svg';">
-                            <div class="project-img-placeholder pattern-cli">
-                                <span class="placeholder-icon">💻</span>
-                                <span class="placeholder-text">TaskFlow CLI Tool</span>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="overlay-tech-badges">
-                                    <span class="tech-badge">Python</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">TaskFlow CLI</h3>
-                            <p class="project-desc">Una robusta aplicación de línea de comandos para la gestión de tareas diarias, clasificación por prioridades y estados, y generación de reportes en la terminal.</p>
-                            
-                            <div class="project-learnings">
-                                <h4 class="learnings-title">Lo aprendido:</h4>
-                                <ul class="learnings-list">
-                                    <li>Manejo de argumentos de terminal (CLI)</li>
-                                    <li>Persistencia de datos y formatos estructurados</li>
-                                    <li>Diseño UX centrado en la consola del desarrollador</li>
-                                    <li>Modularización del código en Python</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-actions">
-                                <a href="https://github.com/juliethrojas755-beep" class="btn-project btn-git" target="_blank" rel="noopener noreferrer">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                                    <span>Código</span>
-                                </a>
-                                <a href="#" class="btn-project btn-demo" onclick="event.preventDefault(); alert('Aplicación ejecutable desde consola. Consulta la documentación en GitHub para clonarlo y ejecutarlo en tu terminal.');">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                    <span>Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 3: CampusShop -->
-                    <article class="project-card glass-card reveal-slide-up">
-                        <div class="project-image-box">
-                            <img src="assets/images/project3.png" alt="Miniatura de CampusShop" class="project-img" onerror="this.src='assets/images/project-placeholder.svg';">
-                            <div class="project-img-placeholder pattern-shop">
-                                <span class="placeholder-icon">🛍️</span>
-                                <span class="placeholder-text">CampusShop E-Commerce</span>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="overlay-tech-badges">
-                                    <span class="tech-badge">HTML5</span>
-                                    <span class="tech-badge">CSS3</span>
-                                    <span class="tech-badge">JavaScript</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">CampusShop</h3>
-                            <p class="project-desc">Plataforma e-commerce dedicada a la venta de prendas de vestir y moda femenina, con navegación fluida y un catálogo de productos responsive y dinámico.</p>
-                            
-                            <div class="project-contributions">
-                                <h4 class="learnings-title">Mi aporte:</h4>
-                                <div class="contrib-badges">
-                                    <span class="contrib-badge">Diseño UI</span>
-                                    <span class="contrib-badge">Maquetación</span>
-                                    <span class="contrib-badge">Organización de Contenido</span>
-                                    <span class="contrib-badge">Experiencia de Usuario (UX)</span>
-                                </div>
-                            </div>
-
-                            <div class="project-actions">
-                                <a href="https://github.com/juliethrojas755-beep" class="btn-project btn-git" target="_blank" rel="noopener noreferrer">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                                    <span>Código</span>
-                                </a>
-                                <a href="https://github.com/juliethrojas755-beep" class="btn-project btn-demo" target="_blank" rel="noopener noreferrer">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                    <span>Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section section-scroll">
-            <div class="container">
-                <div class="section-header text-center reveal-slide-up">
-                    <h2 class="section-title">Contacto</h2>
-                    <div class="section-underline"></div>
-                    <p class="section-subtitle">¿Tienes un proyecto en mente o buscas sumar talento a tu equipo? ¡Hablemos!</p>
-                </div>
-
-                <div class="contact-grid">
-                    <!-- Email Card -->
-                    <a href="mailto:juliethrojas755@gmail.com" class="contact-card glass-card reveal-slide-up" data-contact="email">
-                        <div class="contact-icon-box">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        </div>
-                        <h3 class="contact-title">Correo Electrónico</h3>
-                        <p class="contact-value">juliethrojas755@gmail.com</p>
-                        <span class="contact-action">Enviar correo →</span>
-                    </a>
-
-                    <!-- GitHub Card -->
-                    <a href="https://github.com/juliethrojas755-beep" class="contact-card glass-card reveal-slide-up" target="_blank" rel="noopener noreferrer" data-contact="github">
-                        <div class="contact-icon-box">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        </div>
-                        <h3 class="contact-title">GitHub</h3>
-                        <p class="contact-value">juliethrojas755-beep</p>
-                        <span class="contact-action">Ver perfil →</span>
-                    </a>
-
-                    <!-- LinkedIn Card -->
-                    <a href="#" class="contact-card glass-card reveal-slide-up" onclick="event.preventDefault(); alert('El perfil de LinkedIn estará disponible próximamente.');" data-contact="linkedin">
-                        <div class="contact-icon-box">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </div>
-                        <h3 class="contact-title">LinkedIn</h3>
-                        <p class="contact-value">Próximamente disponible</p>
-                        <span class="contact-action">Conectar →</span>
-                    </a>
-
-                    <!-- WhatsApp Card -->
-                    <a href="https://wa.me/573505734299" class="contact-card glass-card reveal-slide-up" target="_blank" rel="noopener noreferrer" data-contact="whatsapp">
-                        <div class="contact-icon-box">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.017-5.114-2.873-6.97-1.857-1.857-4.335-2.875-6.977-2.876-5.44 0-9.866 4.42-9.871 9.863-.002 1.742.475 3.441 1.381 4.966l-.995 3.637 3.738-.98c1.479.807 3.082 1.233 4.733 1.233zm11.236-7.53c-.307-.154-1.82-.899-2.101-.998-.282-.1-.488-.15-.693.155-.205.3-.795.998-.974 1.2-.18.2-.359.227-.666.073-.308-.154-1.299-.48-2.475-1.528-.915-.815-1.534-1.823-1.713-2.13-.18-.308-.02-.475.134-.628.14-.137.307-.357.462-.536.153-.18.205-.307.307-.512.103-.205.051-.384-.025-.538-.077-.154-.692-1.67-.949-2.286-.25-.6-.523-.52-.718-.53l-.615-.01c-.24-.005-.629.086-.958.445-.328.36-1.25 1.22-1.25 2.978 0 1.757 1.28 3.456 1.459 3.702.179.245 2.518 3.844 6.102 5.39.852.367 1.517.587 2.035.75.856.27 1.636.233 2.253.141.688-.102 1.82-.743 2.076-1.46.257-.718.257-1.332.18-1.46-.077-.127-.282-.204-.589-.358z"/></svg>
-                        </div>
-                        <h3 class="contact-title">WhatsApp</h3>
-                        <p class="contact-value">+57 3505734299</p>
-                        <span class="contact-action">Enviar mensaje →</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container text-center">
-            <p class="footer-copyright">&copy; 2026 Julieth Tatiana Rojas. Todos los derechos reservados.</p>
-            <p class="footer-thanks">Gracias por visitar mi portafolio.</p>
-            <p class="footer-credits">Hecho con <span class="heart">❤️</span> usando HTML, CSS y JavaScript.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="assets/js/script.js"></script>
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
