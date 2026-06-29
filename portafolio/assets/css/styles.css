@@ -1378,7 +1378,17 @@ section {
     }
     
     .hero-grid {
+        grid-template-columns: 1fr;
         gap: 40px;
+    }
+    
+    .hero-photo-wrapper {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    
+    .hero-cta {
+        justify-content: center;
     }
     
     .hero-name {
@@ -1392,6 +1402,10 @@ section {
     
     .about-card-wrapper {
         max-width: 320px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
     
     .timeline::after {
@@ -1531,3 +1545,4 @@ section {
         padding: 20px;
     }
 }
+
