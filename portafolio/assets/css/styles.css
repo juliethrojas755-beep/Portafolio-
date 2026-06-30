@@ -1,27 +1,34 @@
 /* =========================
-   Variables Globales
+   Variables Globales (Paleta Luxury)
 ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
 :root {
+  /* Colores */
   --clr-white: #ffffff;
-  --clr-bg-light: #f8fafc;
-  --clr-text-dark: #0f172a;
-  --clr-text-muted: #475569;
+  --clr-bg-light: #fbfbfa;     /* Blanco roto/marfil muy suave */
+  --clr-text-dark: #111111;    /* Negro puro/profundo */
+  --clr-text-muted: #666666;   /* Gris elegante para legibilidad */
+  
+  /* Tonos Oro y Detalles Premium */
+  --clr-primary: #af9464;      /* Oro mate / Champán */
+  --clr-primary-dark: #8e7343; /* Oro envejecido */
+  --clr-accent: #1e2229;       /* Gris carbón premium para contrastes */
 
-  --clr-primary: #2563eb;   /* Azul Royal */
-  --clr-secondary: #7c3aed; /* Púrpura profundo */
-  --clr-accent: #c4b5fd;    /* Lavanda suave */
+  /* Tipografía Editorial */
+  --font-title: 'Cormorant Garamond', serif; /* Serif clásica de alta costura */
+  --font-body: 'Montserrat', sans-serif;    /* Sans-serif limpia y espaciada */
 
-  --font-title: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  /* Bordes y Estructura (Menos redondeados = Más premium) */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 0px; /* Bordes rectos suelen verse más arquitectónicos y caros */
+  --radius-full: 50px;
 
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-full: 9999px;
-
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
-  --transition-slow: 0.6s ease;
+  /* Transiciones Fluidas */
+  --transition-fast: 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-normal: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* =========================
@@ -36,8 +43,10 @@ body {
   font-family: var(--font-body);
   background: var(--clr-bg-light);
   color: var(--clr-text-dark);
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 a {
   text-decoration: none;
@@ -47,10 +56,11 @@ a {
 img {
   max-width: 100%;
   display: block;
+  filter: grayscale(15%); /* Toque cinemático sutil */
 }
 
 /* =========================
-   Navbar
+   Navbar (Minimalista y Flotante)
 ========================= */
 .navbar-wrapper {
   position: fixed;
@@ -59,242 +69,296 @@ img {
   background: transparent;
   transition: var(--transition-normal);
   z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 .navbar-wrapper.scrolled {
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  background: rgba(251, 251, 250, 0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  border-bottom: 1px solid rgba(175, 148, 100, 0.15);
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  padding: 0 24px;
+  height: 90px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 .nav-logo {
   font-family: var(--font-title);
-  font-weight: 800;
-  font-size: 1.4rem;
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-text-dark);
 }
 .nav-menu {
   display: flex;
-  gap: 32px;
+  gap: 40px;
 }
 .nav-link {
+  font-size: 0.8rem;
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   color: var(--clr-text-muted);
-  position: relative;
 }
-.nav-link.active {
+.nav-link:hover, .nav-link.active {
   color: var(--clr-primary);
 }
-.nav-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-.hamburger {
-  width: 24px;
-  height: 2px;
-  background: var(--clr-text-dark);
-  position: relative;
-}
-.hamburger::before,
-.hamburger::after {
+.nav-link::after {
   content: '';
   position: absolute;
-  width: 24px;
-  height: 2px;
-  background: var(--clr-text-dark);
-  left: 0;
+  bottom: -6px; left: 0;
+  width: 0; height: 1px;
+  background: var(--clr-primary);
+  transition: var(--transition-normal);
 }
-.hamburger::before { top: -8px; }
-.hamburger::after { top: 8px; }
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
 
 /* =========================
-   Hero
+   Hero (Efecto Galería de Arte)
 ========================= */
 .hero-section {
-  padding-top: 120px;
+  padding-top: 140px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #f8fafc, #e0e7ff);
+  background: radial-gradient(circle at center, #ffffff 0%, #f5f5f3 100%);
 }
 .hero-badge {
   display: inline-block;
-  padding: 6px 16px;
-  background: rgba(37,99,235,0.1);
+  padding: 4px 18px;
+  background: transparent;
   color: var(--clr-primary);
+  border: 1px solid var(--clr-primary);
   border-radius: var(--radius-full);
-  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  margin-bottom: 24px;
 }
 .hero-name {
-  font-size: 3rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 12px 0;
+  font-family: var(--font-title);
+  font-size: 4.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--clr-text-dark);
+  margin: 0 0 16px 0;
+  line-height: 1.1;
 }
 .hero-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--clr-text-muted);
+  margin-bottom: 40px;
 }
 .hero-photo-wrapper {
-  width: 280px;
-  margin: 20px auto;
+  width: 320px;
+  margin: 30px auto;
+  position: relative;
+}
+/* Marco elegante alrededor de la foto */
+.hero-photo-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -15px; left: -15px; right: -15px; bottom: -15px;
+  border: 1px solid rgba(175, 148, 100, 0.2);
+  z-index: 0;
+  pointer-events: none;
 }
 .hero-profile-image {
   width: 100%;
+  position: relative;
+  z-index: 1;
   border-radius: var(--radius-lg);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  transition: transform 0.4s ease;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+  transition: var(--transition-slow);
 }
 .hero-profile-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
+  filter: grayscale(0%);
 }
+
+/* Botones Premium */
 .hero-cta {
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
-  gap: 16px;
+  gap: 24px;
   justify-content: center;
 }
 .btn {
-  padding: 12px 24px;
-  border-radius: var(--radius-md);
-  font-family: var(--font-title);
-  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 500;
   cursor: pointer;
   transition: var(--transition-normal);
 }
 .btn-primary {
-  background: var(--clr-primary);
+  background: var(--clr-text-dark);
   color: var(--clr-white);
-  box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+  border: 1px solid var(--clr-text-dark);
 }
 .btn-primary:hover {
-  background: #1e40af;
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
+  color: var(--clr-white);
 }
 .btn-secondary {
-  border: 1px solid var(--clr-primary);
-  color: var(--clr-primary);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: var(--clr-text-dark);
   background: transparent;
 }
 .btn-secondary:hover {
-  background: var(--clr-primary);
-  color: var(--clr-white);
+  border-color: var(--clr-text-dark);
+  background: transparent;
 }
 
 /* =========================
    Sections
 ========================= */
 section {
-  padding: 80px 24px;
+  padding: 140px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .section-title {
-  font-size: 2rem;
-  font-weight: 700;
+  font-family: var(--font-title);
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+  position: relative;
+  color: var(--clr-text-dark);
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--clr-primary);
+  margin: 20px auto 0;
 }
 
 /* =========================
-   Skills
+   Skills (Elegancia Minimalista)
 ========================= */
 #skills ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
   list-style: none;
   padding: 0;
 }
 #skills li {
-  background: var(--clr-white);
-  border-radius: var(--radius-md);
-  padding: 12px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 24px 16px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-text-dark);
+  transition: var(--transition-normal);
 }
 #skills li:hover {
-  transform: translateY(-4px);
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+  transform: translateY(-2px);
+  background: #ffffff;
 }
 
 /* =========================
-   Projects
+   Projects (Estilo Portfolio de Arquitectura/Moda)
 ========================= */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 48px;
 }
 .project-card {
-  background: var(--clr-white);
-  border-radius: var(--radius-md);
+  background: transparent;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: var(--transition-normal);
   display: flex;
   flex-direction: column;
-}
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 .project-image {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/10;
   overflow: hidden;
+  background: #000;
 }
 .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: var(--transition-slow);
+  opacity: 0.9;
 }
 .project-card:hover .project-image img {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  opacity: 1;
 }
 .project-overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(15,23,42,0.5);
+  background: rgba(17, 17, 17, 0.4);
   opacity: 0;
   display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 12px;
-  transition: opacity 0.3s ease;
+  align-items: flex-end;
+  padding: 24px;
+  transition: var(--transition-normal);
 }
 .project-card:hover .project-overlay {
   opacity: 1;
 }
 .tech-badge {
-  background: rgba(255,255,255,0.9);
+  background: #ffffff;
   color: var(--clr-text-dark);
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: var(--radius-md);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
 }
 .project-content {
-  padding: 20px;
+  padding: 24px 0; /* Sin padding interno en los lados para un look editorial */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .project-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 8px;
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--clr-text-dark);
+  margin-bottom: 10px;
 }
 .project-desc {
-  font-size: 0.95rem;
-  color: var(--clr-text-muted)  
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  font-weight: 300;
+  line-height: 1.6;
+}
